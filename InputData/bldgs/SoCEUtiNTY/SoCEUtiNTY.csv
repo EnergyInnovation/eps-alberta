@@ -1,0 +1,8 @@
+,urban residential,rural residential,commercial
+heating,0.0525,0.0525,0.0508
+cooling and ventilation,0.0618,0.0618,0.0604
+envelope,0,0,0
+lighting,0.1090,0.1090,0.1090
+appliances,0.0712,0.0712,0.0692
+other component,0,0,0.0660
+,,,
