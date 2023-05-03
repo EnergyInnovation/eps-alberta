@@ -1288,9 +1288,16 @@ Transportation Pollutant Emissions Fully Disaggregated[Vehicle Type,Pollutant,Ca
 	~		|
 
 BAU Last Year Grid Battery Storage Capacity= DELAY FIXED (
-	BGrBSC BAU Grid Battery Storage Capacity, 1, GET DATA AT TIME(BGrBSC BAU Grid Battery Storage Capacity\
-		, INITIAL TIME - 
-1))
+	BGrBSC BAU Grid Battery Storage Capacity, 1, GBSC Start Year Grid Battery Storage Capacity)
+	~	MW
+	~		|
+
+GBSC Start Year Grid Battery Storage Capacity=
+	GET DIRECT CONSTANTS(
+	   'InputData/elec/BGrBSC/SYGBSC.csv',
+	   ',',
+	   'B2'
+	)
 	~	MW
 	~		|
 
@@ -1677,7 +1684,7 @@ Grid Battery Storage Capacity=
 
 Grid Battery Storage Capacity Last Year= INTEG (
 	New Grid Battery Storage Capacity,
-		GET DATA AT TIME(BGrBSC BAU Grid Battery Storage Capacity, INITIAL TIME - 1))
+		GBSC Start Year Grid Battery Storage Capacity)
 	~	MW
 	~		|
 
