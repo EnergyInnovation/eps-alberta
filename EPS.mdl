@@ -1733,12 +1733,26 @@ Potential Reduction in Proc Emis from Cement[cement and other carbonates]=
 	~	g CO2e
 	~		|
 
-Start Year Components Energy Use[Building Type,Building Fuel,Building Component] :EXCEPT:\
-		 [Building Type,Building Fuel,envelope]=
-	GET DATA AT TIME(BCEU BAU Components Energy Use[Building Type,Building Fuel,Building Component\
-		], INITIAL TIME - 1) ~~|
-Start Year Components Energy Use[Building Type,Building Fuel,envelope]=
-	0
+Start Year Components Energy Use[urban residential,Building Fuel,Building Component\
+		]=
+	GET DIRECT CONSTANTS(
+	   'InputData/bldgs/SYCEU/SYCEU-urban-residential.csv',
+	   ',',
+	   'B2'
+	) ~~|
+Start Year Components Energy Use[rural residential,Building Fuel,Building Component\
+		]=
+	GET DIRECT CONSTANTS(
+	   'InputData/bldgs/SYCEU/SYCEU-rural-residential.csv',
+	   ',',
+	   'B2'
+	) ~~|
+Start Year Components Energy Use[commercial,Building Fuel,Building Component]=
+	GET DIRECT CONSTANTS(
+	   'InputData/bldgs/SYCEU/SYCEU-commercial.csv',
+	   ',',
+	   'B2'
+	)
 	~	BTU
 	~		|
 
