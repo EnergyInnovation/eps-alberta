@@ -5492,7 +5492,7 @@ BAU NPV of Lifetime Vehicle Cost[Vehicle Type,Cargo Type,Vehicle Technology]=
 
 BAU Vehicle Technology Priority Profile[Vehicle Type,Cargo Type,Vehicle Technology,ptype\
 		]=
-	13 ~~|
+	3 ~~|
 BAU Vehicle Technology Priority Profile[Vehicle Type,Cargo Type,Vehicle Technology,ppriority\
 		]=
 	-BAU NPV of Lifetime Vehicle Cost[Vehicle Type,Cargo Type,Vehicle Technology]
@@ -5834,7 +5834,7 @@ Rounding Error Quantization Size=
 
 Vehicle Technology Priority Profile[Vehicle Type,Cargo Type,Vehicle Technology,ptype]\
 		=
-	13 {ptype: normal distribution, integer-only allocation} ~~|
+	3 {ptype: normal distribution, integer-only allocation} ~~|
 Vehicle Technology Priority Profile[Vehicle Type,Cargo Type,Vehicle Technology,ppriority\
 		]=
 	-NPV of Lifetime Vehicle Cost[Vehicle Type,Cargo Type,Vehicle Technology]
@@ -18519,7 +18519,7 @@ Cash Flow Entity:
 	~	
 	~		|
 
-Recipient Vehicle Type<->
+AA Vehicle Type<->
 	Vehicle Type
 	~	
 	~		|
@@ -18741,7 +18741,7 @@ Building Component:
 	~	
 	~		|
 
-Priority Profile:
+ZZ Priority Profile:
 	ptype, ppriority, pwidth, pextra
 	~	
 	~	See the "Allocation Functions" section of the Vensim Reference Manual and \
